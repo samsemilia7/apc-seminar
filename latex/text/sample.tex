@@ -1,0 +1,31 @@
+\chapter[RMQ]{Range Minimum Query}
+\writer{Felix Lauenroth \& Michael Mardaus}
+
+\section{Einleitung}
+
+Im Folgenden werden wir auf die verschiedenen Ansätze des $ Range Minimum Query (RMQ) $ Algroithmus und des Skyline Problems eingehen. Kommen wir zunächst zur Definition der $ RMQ $. Gesucht wird die Indexposition des kleinsten Wertes innerhalb einem gegebenem Intervall [l, r] oder mathematisch Ausgedrückt:
+
+\[\text{RMQ}_{A}(\ell,r) = \text{arg} \ \min_{\ell \leq k \leq r } A[k] \]
+
+\section{Naive Ansätze}
+\subsection{Durch iterieren}
+
+Zunächst beschreiben wir eine auf den ersten Blick einfach aussehende Methode. Wir iterieren sequenziell durch das gegebene Intervall und speichern dabei die Indexposition des Minimums. Dies schaffen wir offensichtlich in $\Oh(n)$ \footnote{\label{foot:1} $n$ beschreibt die Länge des Intervalls}. Wie auf den ersten Blick erkennbar ist variiert die Laufzeit mit der Länge des gegebenen Intervalls. Auch bei mehrfach Ausführung der Abfrage verschlechtert sich die Laufzeit um den erheblichen Faktor $m$\footnote{\label{foot:2} $m$ beschreibt die Anzahl der Abfragen}, welches zu einer Laufzeit von $\Oh(n\cdot m)$ bei $m$ Abfragen führt. Doch diese Methode hat auch einen erheblichen Vorteil. Sie funktioniert in-place, das heißt sie benötigt nur eine konstante Menge an Speicher. Denn das durch-iterieren findet in der Eingabeliste statt und ansonsten wird nur Speicherplatz für die Indexposition benötigt.
+
+\subsection{Preprocessing}
+
+Kommen wir nun zur Anschauung des Preprocessings. Hierbei erstellt man sich zunächst eine $n\times n$ Matrix $M$, in der man alle Kombinationsmöglichkeiten des Intervalls vorberechnet.
+
+\subsection{Preprocessing mit dynamischer Programmierung}
+
+\section{Effiziente Algorithmen}
+\subsection{$\sqrt n $ Teile Algorithmus}
+
+\subsection{Sparse Table}
+
+\chapter{Skyline}
+\writer{Felix Lauenroth \& Michael Mardaus}
+
+\section{Problemstellung}
+
+\section{Anhang}
